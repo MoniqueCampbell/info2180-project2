@@ -1,3 +1,4 @@
+//For bonus marks I did animation
 window.onload = function(){
 
 	var puzzlearea=$("#puzzlearea");
@@ -39,8 +40,8 @@ window.onload = function(){
 
 //try 1 at moving the puzzle to the empty square
 document.getElementByTag("DIV").onclick = function(){
-var title1=puz.getContent("1");
-title1.onclick = function(){	
+var puzzle1=puz.getContent("1");
+puzzle1.onclick = function(){	
 for (var i=1;i<c.length;i++){
 		$(c[i]).addClass("puzzlepiece");
 		c[i].style.left=x+"px";  
@@ -57,13 +58,40 @@ for (var i=1;i<c.length;i++){
 	c[0].style.left="400px";
 	c[0].style.top="400px";
 	
-//try2
+//try2 at moving the puzzle to the empty square
 function myFunction() {
-    document.getElementsByTagName("DIV")[0][0].setAttribute("id", "title1"); 
+    document.getElementsByTagName("DIV")[0][0].setAttribute("id", "puzzle1"); 
+    document.getElementsByTagName("DIV")[0][1].setAttribute("id", "puzzle2"); 
+    document.getElementsByTagName("DIV")[0][2].setAttribute("id", "puzzle3"); 
+    document.getElementsByTagName("DIV")[0][3].setAttribute("id", "puzzle4"); 
+    document.getElementsByTagName("DIV")[0][4].setAttribute("id", "puzzle5"); 
+    document.getElementsByTagName("DIV")[0][5].setAttribute("id", "puzzle6"); 
+    document.getElementsByTagName("DIV")[0][6].setAttribute("id", "puzzle6"); 
+    document.getElementsByTagName("DIV")[0][7].setAttribute("id", "puzzle8"); 
+    document.getElementsByTagName("DIV")[0][8].setAttribute("id", "puzzle9"); 
+    document.getElementsByTagName("DIV")[0][9].setAttribute("id", "puzzle10"); 
+    document.getElementsByTagName("DIV")[0][10].setAttribute("id", "puzzle11"); 
+    document.getElementsByTagName("DIV")[0][11].setAttribute("id", "puzzle12"); 
+    document.getElementsByTagName("DIV")[0][12].setAttribute("id", "puzzle13"); 
+    document.getElementsByTagName("DIV")[0][13].setAttribute("id", "puzzle14"); 
+    document.getElementsByTagName("DIV")[0][14].setAttribute("id", "puzzle15"); 
 }
 myFunction();
-		title1.onclick = function(){
-		document.getElementsById("title1").style.left="400px";  
-		document.getElementsById("title1").style.top="400px";
-		document.getElementsById("title1").style.backgroundPosition = "-300px 100px";
-	}}
+
+	puzzle1.onclick = function(){
+		document.getElementsById("puzzle1").style.left="400px";  
+		document.getElementsById("puzzle1").style.top="400px";
+		document.getElementsById("puzzle1").style.backgroundPosition = "-300px 100px";
+	}
+
+//code for animation
+puzzle1.onclick = function myMove() {
+  var puz1 = document.getElementById("puzzle1");   
+  var id = setInterval(ani, 3);
+  var pos = 0;
+  function ani() {
+      pos++; 
+      puz1.style.top = pos + 'px'; 
+      puz1.style.left = pos + 'px'; 
+    }
+}
